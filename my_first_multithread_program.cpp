@@ -11,6 +11,9 @@ void threadFunc()
 int main()
 {
     std::thread t (threadFunc);
+
+    // this line is needed to make the main
+    // thread wait for this child thread
     t.join();
 
     return 0;
