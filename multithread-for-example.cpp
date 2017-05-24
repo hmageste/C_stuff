@@ -8,11 +8,12 @@ void thread_method (int thread_id) {
 }
 
 int main () {
-    std::thread trehads[num_of_threads];
-    for (int i = 0; i < num_of_threads; i++) {
+    std::thread threads[num_of_threads];
+    for (int i = 0; i < num_of_threads; i++)
         threads[i] = std::thread(thread_method, i);
      
     std::cout << "The main function execution\n";
+
     for (int i = 0; i < num_of_threads; i++)
         threads[i].join();
 
