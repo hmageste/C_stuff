@@ -11,11 +11,11 @@ int main () {
     std::thread threads[num_of_threads];
     for (int i = 0; i < num_of_threads; i++)
         threads[i] = std::thread(thread_method, i);
-     
+
     std::cout << "The main function execution\n";
 
     for (int i = 0; i < num_of_threads; i++)
         threads[i].join();
 
-    return 0;   
+    return 0;
 }

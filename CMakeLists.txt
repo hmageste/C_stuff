@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.24)
+project(C_stuff LANGUAGES C CXX)
+
+# executables
+add_executable(assigniment_within_if assigniment_within_if.cpp)
+add_executable(binary_inversor binary_inversor.c)
+add_executable(error_when_comparing error_when_comparing.cpp)
+add_executable(fibonacci_struct_recursive fibonacci_struct_recursive.cpp)
+add_executable(int2binary int2binary.cpp)
+add_executable(multithread-for-example multithread-for-example.cpp)
+add_executable(my_first_multithread_program my_first_multithread_program.cpp)
+if (UNIX)
+    add_executable(posix-multithread-example posix-multithread-example.cpp)
+endif (UNIX)
+add_executable(static_cast-problem_downcasting static_cast-problem_downcasting.cpp)
+add_executable(template_to_initialize_variable template_to_initialize_variable.cpp)

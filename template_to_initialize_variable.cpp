@@ -1,7 +1,7 @@
 #include <iostream>
 
 template <typename T>
-constexpr T pi = T(3.141592653589793238462643383);
+constexpr T pi = static_cast<T>(3.141592653589793238462643383);
 
 template <>
 constexpr const char* pi<const char*> = "pi";
